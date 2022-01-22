@@ -64,6 +64,6 @@ fi
 chmod 700 *
 echo "Setting up backup.py in /usr/local/bin/ as 'backup'."
 cp backup.py backup
-sudo cp bk /usr/local/bin/
+sudo cp backup /usr/local/bin/
 rm -r backup
 echo "Great!! Now you can use 'backup' from anywhere. Just type 'backup'."
