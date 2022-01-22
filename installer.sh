@@ -61,9 +61,11 @@ echo ""
 echo "telegram_apikey and telegram_chat_id has been set."
 fi 
 
-chmod 700 *
+chmod 777 *
 echo "Setting up backup.py in /usr/local/bin/ as 'backup'."
 cp backup.py backup
 sudo cp backup /usr/local/bin/
+echo "Giving executable permission for /usr/local/bin/backup"
+sudo chmod 777 /usr/local/bin/backup
 rm -r backup
 echo "Great!! Now you can use 'backup' from anywhere. Just type 'backup'."
