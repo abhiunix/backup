@@ -8,10 +8,31 @@ echo ""
 
 if [ -x "$(which zip)" ] ; then
   echo ""
+  sleep 1
+  echo "Looks like everything is installed correctly."
+  echo ""
 else
+    echo ""
     echo "Could not find zip command, please install." >&2
-    echo "Most linux OS uses this command to install zip. $apt install zip. If you are on macOS then run this command: $brew install zip"
-    exit
+    echo ""
+    echo "Most linux OS uses this command to install zip. $ apt install zip. If you are on macOS then run this command: $ brew install zip"
+    echo ""
+    unameVar=$(uname -a)
+
+    if [[ $unameVar == *"Linux"* ]]; then
+      echo "Looks like you are using Linux OS. Running 'sudo apt install zip'"
+      echo ""
+      sudo apt install zip
+      exit
+    elif [[ $unameVar == *"Darwin"* ]]; then
+      echo "Looks like you are using macOS. Running 'brew install zip'"
+      brew install zip
+      exit
+    else
+      echo "We are not able to identify the device. Please contact https://twitter.com/abhiunix"
+    fi
+  exit
+
 fi
 
 if [ -e $HOME/.config/uniqXkeys/uniqXkeys.conf ]; then 
