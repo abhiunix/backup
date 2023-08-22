@@ -30,7 +30,7 @@ You will get your token to access the HTTP API, this HTTP API token is your bot_
 
 ### Get your telegram_chat_id:
 
-Now Open Telegram and search for @chat_id_echo_bot, send him a “/start” message or click on "https://t.me/chat_id_echo_bot" to get your telegram_chat_id .
+Now Open Telegram and search for @chat_id_echo_bot, send him a “/start” message or click on "[https://t.me/chat_id_echo_bot](https://t.me/get_my_telegram_chat_id_bot)" to get your telegram_chat_id .
 > ![](https://raw.githubusercontent.com/abhiunix/images/main/2.png)
 
 
